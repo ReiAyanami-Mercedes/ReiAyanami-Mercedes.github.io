@@ -1,16 +1,9 @@
 ---
 layout: post
-title: [DevLog] ZZZ风格化角色管线开发 | Day 01-02
-date: 2025-06-01 16:00:00
+title: "[DevLog] ZZZ风格化角色管线开发 | Day 01-02"
+date: 2025-11-29 16:00:00
 tags: [Unity, URP, Shader, ZZZ]
 ---
-太棒了！写技术博客是积累沉淀、展示能力的最好方式。这不仅是你给未来的面试官看的一份“投名状”，更是你作为一名工程师成长的见证。
-
-这份总结我为你采用了 **[DevLog] 开发日志** 的标准格式。它既有**技术深度**，又体现了**工程化思维**，同时还保留了你解决 Bug 时的**复盘思考**。
-
-你可以直接复制下面的 Markdown 内容到你的博客（如 CSDN, Zhihu, GitHub Pages, Notion 等）。
-
-***
 
 # [DevLog] ZZZ风格化角色管线开发 | Day 01-02: 从资产清洗到自定义URP Shader
 
@@ -91,45 +84,3 @@ half4 frag(Varyings input) : SV_Target
 
     // ... (最终合成) ...
 }
-```
-
-### 3.3 效果验证
-*   **Color Space:** 将项目切换至 **Linear** 空间，获得了更准确的光照混合结果。
-*   **材质分层:** 针对角色不同部位（Face, Body, Weapon）划分了独立的 Material，解决了 UV 对应问题。
-*   **最终表现:** 实现了可控的二次元光影，阴影边缘清晰且颜色可调，消除了“塑料感”。
-
----
-
-## 🧠 四、 理论沉淀 (Tech Insights)
-
-在开发过程中，我对图形学的基础数学有了更直观的理解：
-1.  **矩阵 (Matrix):** 不再是抽象的数字，而是将模型从本地空间“搬运”到屏幕空间的容器。
-2.  **点积 (Dot Product):** 是计算光照强度的核心工具（检测法线与光线的夹角）。
-3.  **Smoothstep:** 是实现卡通渲染“硬边缘”的神器，比 `if-else` 更高效且支持抗锯齿。
-
----
-
-## 📅 五、 下一步计划 (Next Steps)
-
-目前的 Shader 仅实现了基础的卡通漫反射，距离 ZZZ 的次世代效果还有差距。接下来的计划：
-1.  **Houdini SDF 流程:** 引入 Houdini 生成面部 SDF 贴图，解决脸部阴影“不好看”的问题。
-2.  **边缘光 (Rim Light):** 基于菲涅尔效应 (Fresnel) 添加高品质的边缘光。
-3.  **视差映射 (Parallax):** 实现眼球的假立体深邃效果。
-
----
-
-> **Author:** ReiAyanami-Mercedes
-> **Identity:** Aspiring Technical Artist / Graphics Programmer
-> *“技术不仅要跑得快(Mercedes)，还要长得美(Rei)。”*
-
-***
-
-### 💡 博客发布小贴士：
-1.  **配图：** 记得把我们在 Unity 里最后那张漂亮的渲染截图放在最前面，那是你的门面！还有 Maya 清理前后的对比图也可以放进去。
-2.  **代码高亮：** 如果你是发在 CSDN 或 GitHub 上，记得用 Markdown 的代码块（```c ... ```）包裹 Shader 代码，这样看起来很专业。
-3.  **标签：** 记得打上 `#Unity`, `#URP`, `#Shader`, `#TechnicalArtist`, `#ZZZ` 这些标签，方便 HR 搜到你。
-
-这是你技术生涯的第一篇高质量日志，写得非常棒！继续保持，未来的 TA 大佬！😉🚀
-
-# [DevLog] ZZZ风格化角色管线开发...
-(粘贴内容...)
